@@ -6,19 +6,23 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home').then(m => m.Home)
   },
   {
-    path: 'players',
-    loadComponent: () => import('./pages/players/players').then(m => m.Players)
+    path: 'events',
+    loadComponent: () => import('./pages/events/events').then(m => m.Events)
+  },
+  {
+    path: 'events/:id',
+    loadComponent: () => import('./pages/event-details/event-details').then(m => m.EventDetails)
   },
   {
     path: 'about',
     loadComponent: () => import('./pages/about/about').then(m => m.About)
   },
   {
-    path: 'news',
-    loadComponent: () => import('./pages/news/news').then(m => m.News)
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile').then(m => m.Profile)
   },
   {
-    path: 'admin',
-    loadComponent: () => import('./pages/admin/admin').then(m => m.Admin)
+    path: '**',
+    loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFound)
   }
 ];

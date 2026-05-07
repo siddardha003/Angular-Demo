@@ -11,5 +11,5 @@ import { Navbar } from "./shared/navbar/navbar";
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('CSK Fan Website');
+  protected readonly title = signal('Local Event Board');
 }
