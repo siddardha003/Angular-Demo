@@ -1,0 +1,66 @@
+.page-shell {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 72px 24px;
+}
+
+.profile-shell {
+	display: flex;
+	justify-content: center;
+}
+
+.profile-card {
+	width: 100%;
+	padding: 32px;
+	border-radius: 24px;
+	background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+	color: #fff;
+	box-shadow: 0 24px 60px rgba(26, 26, 46, 0.22);
+}
+
+.eyebrow {
+	margin: 0 0 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #ff8787;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(2.2rem, 5vw, 3.6rem);
+	line-height: 1.05;
+}
+
+.lead {
+	max-width: 680px;
+	margin: 18px 0 0;
+	font-size: 1.08rem;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.profile-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 16px;
+	margin-top: 32px;
+}
+
+.profile-stats div {
+	padding: 18px;
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-stats strong {
+	display: block;
+	font-size: 1.6rem;
+	margin-bottom: 6px;
+}
+
+.profile-stats span {
+	color: rgba(255, 255, 255, 0.75);
+}
