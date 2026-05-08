@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-event-card',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink, NgIf],
   templateUrl: './event-card.html',
-  styleUrl: './event-card.css',
+  styleUrl: './event-card.css'
 })
-export class EventCard {}
+export class EventCard {
+  @Input() event: any;
+}

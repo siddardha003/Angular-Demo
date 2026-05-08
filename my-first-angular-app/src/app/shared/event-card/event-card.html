@@ -1,1 +1,30 @@
-<p>event-card works!</p>
+<div class="event-card">
+
+  <div class="card-image">
+    <img [src]="event.image" [alt]="event.title" />
+    <span class="free-badge" *ngIf="event.isFree">Free</span>
+  </div>
+
+  <div class="card-body">
+
+    <h3 class="card-title">{{ event.title }}</h3>
+
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-icon">📅</span>
+        <span>{{ event.date }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-icon">📍</span>
+        <span>{{ event.location }}</span>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span class="event-price">{{ event.isFree ? 'Free' : '₹' + event.price }}</span>
+      <a [routerLink]="['/events', event.id]" class="card-btn">View Details →</a>
+    </div>
+
+  </div>
+
+</div>

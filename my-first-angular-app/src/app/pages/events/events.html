@@ -1,1 +1,35 @@
-<p>events works!</p>
+<div class="browse-container">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div>
+      <h1>Browse Events</h1>
+      <p>{{ allEvents.length }} events found in Bangalore</p>
+    </div>
+    <button class="post-btn" (click)="modalService.open()">Post an Event</button>
+  </div>
+
+  <!-- Events Grid -->
+  <div class="events-grid">
+    <app-event-card
+      *ngFor="let event of paginatedEvents"
+      [event]="event">
+    </app-event-card>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination" *ngIf="totalPages > 1">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1" class="page-btn">←</button>
+
+    <button
+      *ngFor="let page of pages"
+      (click)="goToPage(page)"
+      class="page-btn"
+      [class.active]="page === currentPage">
+      {{ page }}
+    </button>
+
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages" class="page-btn">→</button>
+  </div>
+
+</div>
